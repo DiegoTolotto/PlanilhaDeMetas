@@ -5,11 +5,14 @@ export const Looks = () => {
     const [mes , setMes] = useState("");
     const [dia , setDia] = useState("");
     const [quantidade , setQuantidade] = useState(0);
-    const [entradas_Futuras , setEntradas_Futuras] = useState(0);
+    const [entradas , setEntradas] = useState(0);
     const [pagamento_Henry , setPagamento_Henry] = useState(0);
 
+
+    const generateID = () => Math.round(Math.random() * 1000);
+
     const handleSave = () => {
-        if(!mes || !dia || !quantidade || !entradas_Futuras || !pagamento_Henry) {
+        if(!mes || !dia || !quantidade || !entradas || !pagamento_Henry) {
             alert("Iforme todos os campos")
             return;
         } else if (mes < 1 || mes > 12) {
@@ -20,6 +23,11 @@ export const Looks = () => {
             return;
         }
 
+        const transacoes = {
+            id: generateID(),
+            entradas: entradas,
+            saidas: pagamento_Henry,
+        } 
 
     }
 
