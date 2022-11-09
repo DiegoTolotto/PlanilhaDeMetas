@@ -20,7 +20,7 @@ function App() {
   }, [listaLook]);
 
   const handleAdd = (transacoes) => {
-    const novoArrayTransacoes = [listaLook, transacoes];
+    const novoArrayTransacoes = [...listaLook, transacoes];
 
     setListaLook(novoArrayTransacoes);
 
