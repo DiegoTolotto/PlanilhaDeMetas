@@ -10,11 +10,11 @@ function App() {
   // const [quantidadeLooks , setQuantidadeLooks] = useState(0);
   const [entrada, setEntrada] = useState(0);
   const [pagamento , setPagamento] = useState(0);
-  console.log(entrada, pagamento)
+  const [total, setTotal] = useState(0);
+  console.log(entrada, pagamento, total)
 
   useEffect(() => {
     const totalEntradas = listaLook
-    .filter((item) => !item.pagamentos)
     .map((transacoes) => Number(transacoes.entrada));
    
     const totalSaidas = listaLook
@@ -24,10 +24,11 @@ function App() {
     const entradaAcc = totalEntradas.reduce((acc, cur) => acc + cur, 0).toFixed(2);
     const saidaAcc = totalSaidas.reduce((acc, cur) => acc + cur, 0).toFixed(2);
 
-    const total = Math.abs(entrada - pagamento).toFixed(2);
+    const total = Math.abs(entradaAcc - saidaAcc).toFixed(2);
     
     setEntrada(entradaAcc)
     setPagamento(saidaAcc)
+    setTotal(`${Number(pagamento) > Number(entrada) ? "-" : ""}${total}`)
   }, [listaLook]); 
 
   const handleAdd = (transacoes) => {

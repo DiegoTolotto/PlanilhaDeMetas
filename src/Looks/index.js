@@ -11,7 +11,7 @@ export const Looks = ({ handleAdd }) => {
     const handleSave = () => {
        
         const transacoes = {
-            // id: generateID(),
+            id: generateID(),
             entrada: entradas,
             pagamentos: pagamento,
             };
