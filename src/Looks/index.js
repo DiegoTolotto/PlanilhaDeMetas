@@ -3,7 +3,7 @@ import './styles.css';
 
 export const Looks = ({ handleAdd }) => {
     const [entradas, setEntradas] = useState("");
-    const [pagamento, setPagamento] = useState(0);
+    const [pagamento, setPagamento] = useState("");
 
 
     const generateID = () => Math.round(Math.random() * 1000);
@@ -11,10 +11,10 @@ export const Looks = ({ handleAdd }) => {
     const handleSave = () => {
        
         const transacoes = {
-            id: generateID(),
+            // id: generateID(),
             entrada: entradas,
             pagamentos: pagamento,
-            }
+            };
 
             
 

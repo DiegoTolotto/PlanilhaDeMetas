@@ -13,12 +13,19 @@ function App() {
   console.log(entrada, pagamento)
 
   useEffect(() => {
-    const totalEntradas = listaLook.map((transacoes) => Number(transacoes.entrada));
-    const totalSaidas = listaLook.map((transacoes) => Number(transacoes.pagamentos));
+    const totalEntradas = listaLook
+    .filter((item) => !item.pagamentos)
+    .map((transacoes) => Number(transacoes.entrada));
+   
+    const totalSaidas = listaLook
+    .filter((item) => item.pagamentos)
+    .map((transacoes) => Number(transacoes.pagamentos));
    
     const entradaAcc = totalEntradas.reduce((acc, cur) => acc + cur, 0).toFixed(2);
     const saidaAcc = totalSaidas.reduce((acc, cur) => acc + cur, 0).toFixed(2);
 
+    const total = Math.abs(entrada - pagamento).toFixed(2);
+    
     setEntrada(entradaAcc)
     setPagamento(saidaAcc)
   }, [listaLook]); 
