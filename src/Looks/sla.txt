@@ -31,7 +31,4 @@
         // <input value={dia} onChange={(e) => setDia(e.target.value)}></input>
         // </div>
 
-        // <div>
-        // <label>Quantidade</label>
-        // <input value={quantidade} onChange={(e) => setQuantidade(e.target.value)}></input>
-        // </div>
+       
