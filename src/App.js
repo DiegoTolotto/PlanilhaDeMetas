@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { Looks } from './Looks';
+import { Resume } from './Resume';
 
 function App() {
 
@@ -28,7 +29,8 @@ function App() {
    
     const entradaAcc = totalEntradas.reduce((acc, cur) => acc + cur, 0).toFixed(2);
     const saidaAcc = totalSaidas.reduce((acc, cur) => acc + cur, 0).toFixed(2);
-    const quantidadeAcc = totalQuantidade * 20;
+    
+    const quantidadeAcc = totalQuantidade.reduce((acc, cur) => acc + cur, 0);
 
     const total = Math.abs(entradaAcc - saidaAcc).toFixed(2);
     
@@ -47,7 +49,10 @@ function App() {
   };
   
   return (
-    <Looks handleAdd={handleAdd}/>
+    <div>
+      <Looks handleAdd={handleAdd} />
+      <Resume entrada={entrada} saida={pagamento} total={total} quantidade={quantidade}/>
+    </div>
   );
 }
 

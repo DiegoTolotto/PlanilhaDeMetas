@@ -5,7 +5,7 @@ export const Looks = ({ handleAdd }) => {
     const [entradas, setEntradas] = useState("");
     const [pagamento, setPagamento] = useState("");
     const [looks, setLooks] = useState("");
-
+    
     const generateID = () => Math.round(Math.random() * 1000);
 
     const handleSave = () => {
