@@ -1,10 +1,9 @@
 import React from "react";
-
+import "./style.css"
 
 export const ResumeItem = ({ value }) => {
     return(
-        <div>
-            <div>{value}</div>
-        </div>
+        <div className="conteudoItem">{value}</div>
+        
     )
 };

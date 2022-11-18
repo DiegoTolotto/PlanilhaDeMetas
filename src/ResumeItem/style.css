@@ -1,0 +1,10 @@
+.containerItem {
+    background-color: rgb(172, 172, 172);
+    display: flex;
+    flex-direction: row;
+}
+
+.conteudoItem {
+    font-size: 40px;
+    
+}

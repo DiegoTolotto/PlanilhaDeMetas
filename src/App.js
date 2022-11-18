@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { Looks } from './Looks';
+import { LooksForm } from './LooksForm';
 import { Resume } from './Resume';
 
 function App() {
@@ -27,10 +27,10 @@ function App() {
     .filter((item) => item.quantidade)
     .map((transacoes) => Number(transacoes.quantidade))
    
-    const entradaAcc = totalEntradas.reduce((acc, cur) => acc + cur, 0).toFixed(2);
-    const saidaAcc = totalSaidas.reduce((acc, cur) => acc + cur, 0).toFixed(2);
+    const entradaAcc = totalEntradas.reduce((acc, cur) => acc + cur, 0 - 2512).toFixed(2);
+    const saidaAcc = totalSaidas.reduce((acc, cur) => acc + cur, 0 - 2512).toFixed(2);
     
-    const quantidadeAcc = totalQuantidade.reduce((acc, cur) => acc + cur, 0);
+    const quantidadeAcc = totalQuantidade.reduce((acc, cur) => acc + cur, 0 - 30);
 
     const total = Math.abs(entradaAcc - saidaAcc).toFixed(2);
     
@@ -49,9 +49,9 @@ function App() {
   };
   
   return (
-    <div>
-      <Looks handleAdd={handleAdd} />
+    <div className='app'>
       <Resume entrada={entrada} saida={pagamento} total={total} quantidade={quantidade}/>
+      <LooksForm handleAdd={handleAdd} />
     </div>
   );
 }
