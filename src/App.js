@@ -49,7 +49,7 @@ function App() {
   };
   
   return (
-    <div className='app'>
+    <div>
       <Resume entrada={entrada} saida={pagamento} total={total} quantidade={quantidade}/>
       <LooksForm handleAdd={handleAdd} />
     </div>

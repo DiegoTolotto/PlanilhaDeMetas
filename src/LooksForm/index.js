@@ -30,6 +30,14 @@ export const LooksForm = ({ handleAdd }) => {
     return (
         <div className="containerForm">
             <div className="form">
+                <input 
+                    placeholder="quantidade"
+                    className="input"
+                    value={looks} 
+                    type="number" 
+                    onChange={(e) => setLooks(e.target.value)}></input>
+            </div>
+            <div className="form">
                 <input
                     placeholder="entradas"
                     className="input"
@@ -48,17 +56,9 @@ export const LooksForm = ({ handleAdd }) => {
                     onChange={(e) => setPagamento(e.target.value)}></input>
             </div>
 
-            <div className="form">
-                <input 
-                    placeholder="quantidade"
-                    className="input"
-                    value={looks} 
-                    type="number" 
-                    onChange={(e) => setLooks(e.target.value)}></input>
-            </div>
 
 
-            <button onClick={handleSave}>Enviar</button>
+            <button className="btn" onClick={handleSave}>Enviar</button>
 
         </div>
     )

@@ -1,8 +1,9 @@
 .containerForm {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     margin-top: 100px;
+    align-items: center;
 }
 
 .form {
@@ -21,6 +22,19 @@
     height: 25px;
     width: 250px;
     border: 1px solid rgb(226, 217, 217);
+    color: rgb(197, 197, 197);
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20px;
+    background-color: rgb(48, 48, 48);
+}
+
+.btn {
+    width: 205px;
+    height: 25px;
+    background-color: rgb(48, 48, 48);
+    box-shadow: 5px 2px black;
+}
+
+.btn:hover {
+    background-color: rgb(114, 112, 112);
 }

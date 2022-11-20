@@ -1,5 +1,26 @@
 containerResume {
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
     background-color: black;
     padding: 50px;
+}
+
+.looks, .entradas, .saidas, .total {
+    display: flex;
+    justify-content: center;
+}
+.looks {
+    background-color: rgb(186, 196, 204);
+}
+
+.entradas {
+    background-color: yellow;
+}
+
+.saidas {
+    background-color: red;
+}
+
+.total {
+    background-color: rgb(69, 69, 177);
 }

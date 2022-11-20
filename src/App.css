@@ -26,6 +26,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background-color: rgb(48, 48, 48);
 }
 ol, ul {
 	list-style: none;
@@ -43,6 +44,3 @@ table {
 	border-spacing: 0;
 }
 
-.app {
-    background-color: ;
-}
