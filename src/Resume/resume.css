@@ -1,26 +1,43 @@
 containerResume {
     display: flex;
+    justify-content: center;
     flex-direction: row;
     background-color: black;
     padding: 50px;
 }
 
-.looks, .entradas, .saidas, .total {
+.entradas, .saidas, .total {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    width: 200px;
+    margin-top: 10px;
+
 }
 .looks {
-    background-color: rgb(186, 196, 204);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 90px;
+    width: 550px;
+    margin-top: 30px;
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
 }
 
 .entradas {
-    background-color: yellow;
+    border: 1px solid yellow;
+    color: rgb(190, 190, 49);
 }
 
 .saidas {
-    background-color: red;
+    border: 1px solid red;
+    color: rgb(163, 47, 47);
 }
 
 .total {
-    background-color: rgb(69, 69, 177);
+    border: 1px solid rgb(48, 48, 218);
+    color: rgb(63, 63, 110);
 }
