@@ -6,7 +6,7 @@ import "./resume.css"
 export const Resume = ({ entrada, saida, total, quantidade }) => {
     return (
         <div>
-            <div>
+            <div  className="containerResume">
                 <div className="looks">
                     {/* 
                     Este é um campo que apresenta o numero total
@@ -18,7 +18,7 @@ export const Resume = ({ entrada, saida, total, quantidade }) => {
                     
                 </div>
 
-                <div className="containerResume">
+                <div>
                     <div className="entradas">
                         <p>entradas</p>
                         <ResumeItem value={entrada} />

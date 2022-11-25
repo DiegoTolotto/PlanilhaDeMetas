@@ -50,7 +50,7 @@ function App() {
   
   return (
     <div>
-      <Resume entrada={entrada} saida={pagamento} total={total} quantidade={quantidade}/>
+      <Resume className='resume' entrada={entrada} saida={pagamento} total={total} quantidade={quantidade}/>
       <LooksForm handleAdd={handleAdd} />
     </div>
   );
