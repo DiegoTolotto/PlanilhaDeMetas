@@ -17,7 +17,7 @@ function App() {
 
   useEffect(() => {
     const totalEntradas = listaLook
-    .map((transacoes) => Number(transacoes.entrada));
+    .map((transacoes) => Number(transacoes.entradas));
    
     const totalSaidas = listaLook
     .filter((item) => item.pagamentos)
@@ -50,8 +50,8 @@ function App() {
   
   return (
     <div>
-      <Resume className='resume' entrada={entrada} saida={pagamento} total={total} quantidade={quantidade}/>
-      <LooksForm handleAdd={handleAdd} />
+      <Resume className='resume' entradas={entrada} saida={pagamento} total={total} quantidade={quantidade}/>
+      <LooksForm handleAdd={handleAdd} listaLook={listaLook} setListaLook={setListaLook}/>
     </div>
   );
 }
