@@ -4,7 +4,7 @@ import './styles.css';
 
 export const LooksForm = ({ handleAdd, listaLook, setListaLook }) => {
     const [entradas, setEntradas] = useState("");
-    const [pagamento, setPagamento] = useState("");
+    const [sSaida, setSaida] = useState(false);
     const [looks, setLooks] = useState("");
 
     const generateID = () => Math.round(Math.random() * 1000);
@@ -14,8 +14,7 @@ export const LooksForm = ({ handleAdd, listaLook, setListaLook }) => {
         const transacoes = {
             id: generateID(),
             entradas: entradas,
-            pagamentos: pagamento,
-            quantidade: looks,
+            pagamentos: sSaida,
         };
 
 
@@ -23,22 +22,22 @@ export const LooksForm = ({ handleAdd, listaLook, setListaLook }) => {
         handleAdd(transacoes);
 
         setEntradas("");
-        setPagamento("");
-        setLooks("");
+        // setPagamento("");
+        // setLooks("");
     }
 
 
     return (
         <>
             <div className="containerForm">
-                <div className="form">
+                {/* <div className="form">
                     <input
                         placeholder="quantidade"
                         className="input"
                         value={looks}
                         type="number"
                         onChange={(e) => setLooks(e.target.value)}></input>
-                </div>
+                </div> */}
                 <div className="form">
                     <input
                         placeholder="entradas"
@@ -49,16 +48,16 @@ export const LooksForm = ({ handleAdd, listaLook, setListaLook }) => {
                     </input>
                 </div>
 
-                <div className="form">
-                    <input
-                        placeholder="saidas"
-                        className="input"
-                        value={pagamento}
-                        type="number"
-                        onChange={(e) => setPagamento(e.target.value)}></input>
+                <div>
+                    <input 
+                        type="radio"
+                        id="rEntrada"
+                        onChange={() => setSaida(!sSaida)}></input>
+                    <input 
+                        type="radio"
+                        id="rSaida"
+                        onChange={() => setSaida(!sSaida)}></input>
                 </div>
-
-
 
                 <button className="btn" onClick={handleSave}>Enviar</button>
 
