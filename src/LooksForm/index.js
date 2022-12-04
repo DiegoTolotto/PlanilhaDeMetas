@@ -52,11 +52,15 @@ export const LooksForm = ({ handleAdd, listaLook, setListaLook }) => {
                     <input 
                         type="radio"
                         id="rEntrada"
-                        onChange={() => setSaida(!sSaida)}></input>
+                        name="group1"
+                        onChange={() => setSaida(!sSaida)}/>
+                        <label htmlFor="rEntrada">Entrada</label> 
                     <input 
                         type="radio"
                         id="rSaida"
-                        onChange={() => setSaida(!sSaida)}></input>
+                        name="group1"
+                        onChange={() => setSaida(!sSaida)}/>
+                        <label htmlFor="rSaida">Saida</label> 
                 </div>
 
                 <button className="btn" onClick={handleSave}>Enviar</button>
