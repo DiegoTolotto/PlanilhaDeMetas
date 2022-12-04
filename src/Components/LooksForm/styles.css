@@ -2,20 +2,29 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    margin-top: 100px;
+    margin-top: 2%;
     align-items: center;
 }
 
 .form {
     display: flex;
     justify-content: space-around;
-    padding: 10px;
+    margin: 15px;
 }
 
 .label {
     margin: 0 10px ;
     font-size: 25px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#rEntrada, #rSaida {
+    margin: 0 10px 0 15px;
+
+} 
+
+#radioInput {
+    padding: 2%;
 }
 
 .input {

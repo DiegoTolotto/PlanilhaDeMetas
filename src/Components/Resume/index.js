@@ -5,35 +5,33 @@ import "./resume.css"
 
 export const Resume = ({ entradas, saida, total, quantidade }) => {
     return (
-        <div>
-            <div  className="containerResume">
+        <>
+            <div id="containerResume">
                 {/* <div className="looks">
                     {/* 
                     Este é um campo que apresenta o numero total
                     de "looks" (Conjuntos, vestidos ou peças de 
                         roupa)                 
                     */}
-                    {/* <p>Looks</p>
+                {/* <p>Looks</p>
                     <Looks className="looks" value={quantidade} />
                     
                 </div>  */}
+                <spa id="entradas">
+                    <p>entradas</p>
+                    <ResumeItem value={entradas} />
+                </spa>
+                <span id="saidas">
+                    <p>saidas</p>
+                    <ResumeItem value={saida} />
+                </span>
+                <span id="total">
+                    <p>total</p>
+                    <ResumeItem value={total} />
+                </span>
 
-                <div>
-                    <div className="entradas">
-                        <p>entradas</p>
-                        <ResumeItem value={entradas} />
-                    </div>
-                    <div className="saidas">
-                        <p>saidas</p>
-                        <ResumeItem value={saida} />
-                    </div>
-                    <div className="total">
-                        <p>total</p>
-                        <ResumeItem value={total} />
-                    </div>
-                </div>
 
             </div>
-        </div>
+        </>
     )
 };

@@ -40,7 +40,7 @@ export const LooksForm = ({ handleAdd, listaLook, setListaLook }) => {
                 </div> */}
                 <div className="form">
                     <input
-                        placeholder="entradas"
+                        placeholder="Valor"
                         className="input"
                         value={entradas}
                         type="number"
@@ -48,7 +48,7 @@ export const LooksForm = ({ handleAdd, listaLook, setListaLook }) => {
                     </input>
                 </div>
 
-                <div>
+                <div id="radioInput">
                     <input 
                         type="radio"
                         id="rEntrada"
