@@ -5,7 +5,7 @@ import './styles.css';
 export const LooksForm = ({ handleAdd, listaLook, setListaLook }) => {
     const [entradas, setEntradas] = useState("");
     const [sSaida, setSaida] = useState(false);
-    const [looks, setLooks] = useState("");
+    // const [looks, setLooks] = useState("");
 
     const generateID = () => Math.round(Math.random() * 1000);
 

@@ -1,12 +1,12 @@
 import React from "react";
 import { FaTrash } from "react-icons/fa";
 
-const GridItem = ({ item, deletar }) => {
+const GridItem = ({ item, onDelete }) => {
     return (
         <>
-            <div>{item.entrada}</div>
+            <div>{item.entradas}</div>
             <div>{item.pagamentos}</div>
-            <div><button onclick={() => deletar(item.id)}>vem</button></div>
+            <div><button onClick={() => onDelete(item.id)}>Deletar</button></div>
         </>
     )
 };
