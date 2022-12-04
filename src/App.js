@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { LooksForm } from './LooksForm';
-import { Resume } from './Resume';
+import { LooksForm } from './Components/LooksForm';
+
+import { Resume } from './Components/Resume';
 import Global from './styles/global';
 
 
@@ -14,7 +15,6 @@ function App() {
   const [pagamento , setPagamento] = useState(0);
   // const [quantidade, setQuantidade] = useState(0);
   const [total, setTotal] = useState(0);
-  console.log(entrada, pagamento, total)
 
   useEffect(() => {
     const totalEntradas = listaLook
