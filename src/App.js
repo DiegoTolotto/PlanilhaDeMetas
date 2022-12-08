@@ -42,7 +42,7 @@ function App() {
     // setQuantidade(quantidadeAcc);
     setEntrada(`${entradaAcc}`)
     setPagamento(`${saidaAcc}`)
-    setTotal(`${Number(entrada) < Number(pagamento) ? "-" : ""}${total}`)
+    setTotal(`${Number(pagamento) > Number(entrada) ? "-" : ""}${total}`)
   }, [listaLook]); 
 
   const handleAdd = (transacoes) => {

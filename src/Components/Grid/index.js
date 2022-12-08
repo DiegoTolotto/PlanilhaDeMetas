@@ -11,9 +11,9 @@ const Grid = ({ itens, setItens }) => {
 
     return (
         <>
-            <div> {itens?.map((item, index) => (
+             {itens?.map((item, index) => (
                     <GridItem key={index} item={item} onDelete={onDelete}/>
-                ))}</div>
+                ))}
         </>
     )
 };
